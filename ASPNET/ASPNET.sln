@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula 05 - Aplicacao MVC Conceitos", "Aula 05 - Aplicacao MVC Conceitos\Aula 05 - Aplicacao MVC Conceitos.csproj", "{5410D295-F7C0-4191-80F4-4CBC4252F274}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula 06 - Conceitos Criando Views", "Aula 06 - Conceitos Criando Views\Aula 06 - Conceitos Criando Views.csproj", "{85F260C5-A999-4258-8BB2-CF5768EAB879}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5410D295-F7C0-4191-80F4-4CBC4252F274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5410D295-F7C0-4191-80F4-4CBC4252F274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5410D295-F7C0-4191-80F4-4CBC4252F274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5410D295-F7C0-4191-80F4-4CBC4252F274}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85F260C5-A999-4258-8BB2-CF5768EAB879}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85F260C5-A999-4258-8BB2-CF5768EAB879}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85F260C5-A999-4258-8BB2-CF5768EAB879}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85F260C5-A999-4258-8BB2-CF5768EAB879}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E45A7469-EB8F-4F48-9B50-B761DA0700E5}
+	EndGlobalSection
+EndGlobal
