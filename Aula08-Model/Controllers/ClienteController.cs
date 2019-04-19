@@ -29,8 +29,10 @@ namespace Aula07_Model.Controllers
         [HttpPost]
         public ActionResult SalvarCliente(Cliente cli)
         {
+            //Outra forma que pode ser feita para pegar os dados no ActionResult
+            //public ActionResult SalvarCliente(int CliendId, string Nome, string Email, string telefone)
 
-            return View();
+            return null;
         }
     }
 } 
