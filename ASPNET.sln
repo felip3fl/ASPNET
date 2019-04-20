@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.168
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula05-AplicacaoMVCConceitos", "Aula05-AplicacaoMVCConceitos\Aula05-AplicacaoMVCConceitos.csproj", "{5410D295-F7C0-4191-80F4-4CBC4252F274}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula06-ConceitosCriandoViews", "Aula06-ConceitosCriandoViews\Aula06-ConceitosCriandoViews.csproj", "{85F260C5-A999-4258-8BB2-CF5768EAB879}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula07-Model", "Aula07-Model\Aula07-Model.csproj", "{B951B7AD-39B1-4130-8261-C81B219A03BD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula08-Model", "Aula08-Model\Aula08-Model.csproj", "{B951B7AD-39B1-4130-8261-C81B219A03BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
