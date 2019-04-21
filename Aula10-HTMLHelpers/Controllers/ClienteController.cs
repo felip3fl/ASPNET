@@ -9,6 +9,12 @@ namespace Aula10_HTMLHelpers.Controllers
 {
     public class ClienteController : Controller
     {
+
+        public ActionResult index()
+        {
+            return View(); 
+        }
+
         // GET: Cliente
         public ActionResult Detalhe()
         {
