@@ -15,31 +15,18 @@
 <body>
     <div>
 
-        <form action="/Cliente/SalvarCliente" method="POST">
+        @using (Html.BeginForm("SalvarCliente", "Cliente"))
+        {
+            <br />
+            <p>Código: @Html.TextBoxFor(x => x.CliendId, new { @type = "number" })</p> @*Para indicar que está trabalahndo com números: @type = "number"*@
+            <p>Nome: @Html.TextBoxFor(x => x.Nome)</p>
+            <p>Email: @Html.TextBoxFor(x => x.Email)</p>
+            <p>Telefone: @Html.TextBoxFor(x => x.Telefone)</p>
 
-            <fieldset>
-                <legend>
-                    Cliente
-                </legend>
-
-                <div><label for="CliendId">Id</label></div>
-                <div><input type="text" value="@Model.CliendId" id="CliendId" , name="CliendId" /></div>
-
-                <div><label for="Nome">Nome</label></div>
-                <div><input type="text" value="@Model.Nome" id="Nome" , name="Nome" /></div>
-
-                <div><label for="Email">Email</label></div>
-                <div><input type="text" value="@Model.Email" id="Email" , name="Email" /></div>
-
-                <div><label for="Telefone">Telefone</label></div>
-                <div><input type="text" value="@Model.Telefone" id="Telefone" , name="Telefone" /></div>
-
-                <p>
-                    <input type="submit" value="Enviar" />
-                </p>
-
-            </fieldset>
-        </form>
+            <p>
+                <input type="submit" value="Enviar">
+            </p>
+        }
 
     </div>
 </body>
