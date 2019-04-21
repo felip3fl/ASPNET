@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula08-Model", "Aula08-Mode
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula09-ModelBinding", "Aula09-ModelBinding\Aula09-ModelBinding.csproj", "{123B12C2-A95F-410E-A704-DE9C70E971C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula10-HTMLHelpers", "Aula10-HTMLHelpers\Aula10-HTMLHelpers.csproj", "{3E5F7369-EC2C-4097-80AB-F892D272FE38}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{123B12C2-A95F-410E-A704-DE9C70E971C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{123B12C2-A95F-410E-A704-DE9C70E971C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{123B12C2-A95F-410E-A704-DE9C70E971C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E5F7369-EC2C-4097-80AB-F892D272FE38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E5F7369-EC2C-4097-80AB-F892D272FE38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E5F7369-EC2C-4097-80AB-F892D272FE38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E5F7369-EC2C-4097-80AB-F892D272FE38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
