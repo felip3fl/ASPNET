@@ -1,0 +1,47 @@
+﻿@model Aula10_HTMLHelpers.Models.Cliente
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detalhe</title>
+</head>
+<body>
+    <div>
+
+        <form action="/Cliente/SalvarCliente" method="POST">
+
+            <fieldset>
+                <legend>
+                    Cliente
+                </legend>
+
+                <div><label for="CliendId">Id</label></div>
+                <div><input type="text" value="@Model.CliendId" id="CliendId" , name="CliendId" /></div>
+
+                <div><label for="Nome">Nome</label></div>
+                <div><input type="text" value="@Model.Nome" id="Nome" , name="Nome" /></div>
+
+                <div><label for="Email">Email</label></div>
+                <div><input type="text" value="@Model.Email" id="Email" , name="Email" /></div>
+
+                <div><label for="Telefone">Telefone</label></div>
+                <div><input type="text" value="@Model.Telefone" id="Telefone" , name="Telefone" /></div>
+
+                <p>
+                    <input type="submit" value="Enviar" />
+                </p>
+
+            </fieldset>
+        </form>
+
+    </div>
+</body>
+</html>
+
