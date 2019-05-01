@@ -25,5 +25,16 @@ namespace Aula13_FormCollection.Controllers
             }
             return View();
         }
+
+        public void SalvarCliente(FormCollection form1)
+        {
+            string nome = form1["nome"];
+            string email = form1["email"];
+            string sexo = form1["sexo"];
+            string idade = form1["idade"];
+            //logica para tratar os dados
+            //salvar , ...
+        }
+
     }
 }
