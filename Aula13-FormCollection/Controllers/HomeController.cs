@@ -13,5 +13,17 @@ namespace Aula13_FormCollection.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Index(FormCollection formulario)
+        {
+            foreach (string chave in formulario)
+            {
+                Response.Write("Chave = " + chave + " ");
+                Response.Write("Valor = " + formulario[chave]);
+                Response.Write("<br/>");
+            }
+            return View();
+        }
     }
 }
