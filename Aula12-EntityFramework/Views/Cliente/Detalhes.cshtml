@@ -1,0 +1,22 @@
+﻿@model Aula12_EntityFramework.Models.Cliente
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detalhes</title>
+</head>
+<body>
+    <div>
+        <p>Cliente ID: @Html.TextBoxFor(c => c.ClienteId)</p>
+        <p>Nome: @Html.TextBoxFor(c => c.Nome)</p>
+        <p>Email: @Html.TextBoxFor(c => c.Email)</p>
+        <p>Telefone: @Html.TextBoxFor(c => c.Telefone)</p>
+    </div>
+</body>
+</html>
