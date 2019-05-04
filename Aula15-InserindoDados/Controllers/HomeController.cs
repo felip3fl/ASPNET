@@ -53,16 +53,22 @@ namespace Aula15_InserindoDados.Controllers
 
         [HttpPost]
         [ActionName("Edit")]
-        public ActionResult Edit_Post(Aluno aluno)
+        public ActionResult Edit_Post(int id)
         {
+            AlunoBLL alunobll = new AlunoBLL();
+            Aluno aluno = alunobll.getAlunos().Single(x => x.Id == id);
+
+            //Metodo includeProperties
+            UpdateModel(aluno, includeProperties: new[] { "Id", "Email", "Idade", "DataInscricao", "Sexo" });
+
+            //Metodo excludeProperties
+            //UpdateModel(aluno, null, null, excludeProperties: new[] { "Nome" });
 
             if (ModelState.IsValid)
             {
-                AlunoBLL alunoBLL = new AlunoBLL();
-                alunoBLL.AtualizarAluno(aluno);
+                alunobll.AtualizarAluno(aluno);
                 return RedirectToAction("Index");
             }
-
             return View(aluno);
         }
 
