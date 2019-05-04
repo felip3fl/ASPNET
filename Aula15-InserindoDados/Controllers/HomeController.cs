@@ -28,5 +28,23 @@ namespace Aula15_InserindoDados.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult Create(FormCollection formulario)
+        {
+
+            //Incluir informações postadas
+            Aluno aluno = new Aluno();
+            aluno.Nome = formulario["Nome"];
+            aluno.Email = formulario["Email"];
+            aluno.Idade = Convert.ToInt32(formulario["Idade"]);
+            aluno.DataInscricao = Convert.ToDateTime(formulario["DataInscricao"]);
+            aluno.Sexo = formulario["Sexo"];
+
+            AlunoBLL alunoBLL = new AlunoBLL();
+            alunoBLL.IncluirAluno(aluno);
+
+            return RedirectToAction("Index");
+        }
+
     }
 }
