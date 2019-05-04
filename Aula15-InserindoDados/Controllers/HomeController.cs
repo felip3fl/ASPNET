@@ -42,5 +42,14 @@ namespace Aula15_InserindoDados.Controllers
             return View();
         }
 
+        //GET
+        public ActionResult Edit(int id)
+        {
+            AlunoBLL alunoBLL = new AlunoBLL();
+            Aluno aluno = alunoBLL.getAlunos().Single(x => x.Id == id);
+
+            return View(aluno);
+        }
+
     }
 }
