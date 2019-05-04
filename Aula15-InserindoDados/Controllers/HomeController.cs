@@ -51,5 +51,20 @@ namespace Aula15_InserindoDados.Controllers
             return View(aluno);
         }
 
+        [HttpPost]
+        [ActionName("Edit")]
+        public ActionResult Edit_Post(Aluno aluno)
+        {
+
+            if (ModelState.IsValid)
+            {
+                AlunoBLL alunoBLL = new AlunoBLL();
+                alunoBLL.AtualizarAluno(aluno);
+                return RedirectToAction("Index");
+            }
+
+            return View(aluno);
+        }
+
     }
 }
