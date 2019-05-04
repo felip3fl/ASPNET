@@ -21,5 +21,12 @@ namespace Aula15_InserindoDados.Controllers
             //passando para view
             return View(alunos);
         }
+
+        // GET
+        public ActionResult Create()
+        {
+            return View();
+        }
+
     }
 }
