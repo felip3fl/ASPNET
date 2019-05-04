@@ -28,23 +28,44 @@ namespace Aula15_InserindoDados.Controllers
             return View();
         }
 
+        //[HttpPost]
+        //public ActionResult Create(FormCollection formulario)
+        //{
+
+        //    //Incluir informações postadas
+        //    Aluno aluno = new Aluno();
+        //    aluno.Nome = formulario["Nome"];
+        //    aluno.Email = formulario["Email"];
+        //    aluno.Idade = Convert.ToInt32(formulario["Idade"]);
+        //    aluno.DataInscricao = Convert.ToDateTime(formulario["DataInscricao"]);
+        //    aluno.Sexo = formulario["Sexo"];
+
+        //    AlunoBLL alunoBLL = new AlunoBLL();
+        //    alunoBLL.IncluirAluno(aluno);
+
+        //    return RedirectToAction("Index");
+        //}
+
+        #region Recebendo dados atraves da URL
         [HttpPost]
-        public ActionResult Create(FormCollection formulario)
+        public ActionResult Create(string nome, string email, int idade, DateTime dataInscricao, string sexo)
         {
 
-            //Incluir informações postadas
+
             Aluno aluno = new Aluno();
-            aluno.Nome = formulario["Nome"];
-            aluno.Email = formulario["Email"];
-            aluno.Idade = Convert.ToInt32(formulario["Idade"]);
-            aluno.DataInscricao = Convert.ToDateTime(formulario["DataInscricao"]);
-            aluno.Sexo = formulario["Sexo"];
+            aluno.Nome = nome;
+            aluno.Email = email;
+            aluno.Idade = Convert.ToInt32(idade);
+            aluno.DataInscricao = Convert.ToDateTime(dataInscricao);
+            aluno.Sexo = sexo;
 
             AlunoBLL alunoBLL = new AlunoBLL();
             alunoBLL.IncluirAluno(aluno);
 
             return RedirectToAction("Index");
         }
+        #endregion
+
 
     }
 }
