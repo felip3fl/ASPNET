@@ -31,17 +31,12 @@ namespace Aula15_InserindoDados.Controllers
 
         [HttpPost]
         [ActionName("Create")] //para qual Action o post da View vai procurar
-        public ActionResult Create_Post()
+        public ActionResult Create_Post(Aluno aluno)
         {
-
-            Aluno aluno = new Aluno();
-            TryUpdateModel(aluno);
-
-            if (ModelState.IsValid) //ModelState - se o modelo é válido
+            if (ModelState.IsValid)
             {
                 AlunoBLL alunobll = new AlunoBLL();
                 alunobll.IncluirAluno(aluno);
-
                 return RedirectToAction("Index");
             }
             return View();
