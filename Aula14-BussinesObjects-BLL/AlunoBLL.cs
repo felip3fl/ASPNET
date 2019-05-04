@@ -9,7 +9,7 @@ using System.Data;
 
 namespace Aula14_BussinesObjects_BLL
 {
-    class AlunoBLL
+    public class AlunoBLL
     {
         public IEnumerable<Aluno> getAlunos()
         {
