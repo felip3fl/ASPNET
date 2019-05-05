@@ -68,5 +68,12 @@ namespace Aula15_InserindoDados.Controllers
             return View(aluno);
         }
 
+        public ActionResult Delete(int id)
+        {
+            AlunoBLL alunoBLL = new AlunoBLL();
+            alunoBLL.DeletarAluno(id);
+            return RedirectToAction("Index");
+        }
+
     }
 }
