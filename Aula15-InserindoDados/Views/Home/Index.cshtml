@@ -15,7 +15,7 @@
     <p>
         @Html.ActionLink("Criar Novo Aluno", "Create")
     </p>
-    <table class="table"  border="1">
+    <table class="table" border="1">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
@@ -34,32 +34,41 @@
             </th>
             <th></th>
         </tr>
-    
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Idade)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataInscricao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Sexo)
-            </td>
-            <td>
-                @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
-                @Html.ActionLink("Detalhes", "Details", new { id=item.Id }) |
-                @Html.ActionLink("Deletar", "Delete", new { id=item.Id })
-            </td>
-        </tr>
-    }
-    
+
+        @foreach (var item in Model)
+        {
+            using (@Html.BeginForm("Delete", "Home", new { id = item.Id }))
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Idade)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataInscricao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sexo)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                        @Html.ActionLink("Detalhes", "Details", new { id = item.Id }) |
+
+                        @*@Html.ActionLink("Deletar", "Delete", new { id=item.Id })*@
+
+
+                        <input type="submit" value="Deletar" onclick="return confirm('Confirma a exclusão do aluno @item.Nome');" />
+
+
+                    </td>
+                </tr>
+            }
+        }
     </table>
 </body>
 </html>

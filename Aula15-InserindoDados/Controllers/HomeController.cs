@@ -68,27 +68,15 @@ namespace Aula15_InserindoDados.Controllers
             return View(aluno);
         }
 
+        [HttpPost]
         public ActionResult Delete(int id)
         {
             AlunoBLL alunoBLL = new AlunoBLL();
-            //alunoBLL.DeletarAluno(id);
-            //return RedirectToAction("Index");
-
-            Aluno aluno = alunoBLL.getAlunos().Single(x => x.Id == id);
-            return View(aluno);
+            alunoBLL.DeletarAluno(id); 
+            return RedirectToAction("Index");
         }
 
-        [HttpPost]
-        public ActionResult Delete(Aluno aluno)
-        {
-            if (ModelState.IsValid)
-            {
-                AlunoBLL alunobll = new AlunoBLL();
-                alunobll.DeletarAluno(aluno.Id);
-                return RedirectToAction("Index");
-            }
-            return View(aluno);
-        }
+
 
     }
 }
