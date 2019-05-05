@@ -19,43 +19,56 @@
             <dt>
                 @Html.DisplayNameFor(model => model.Nome)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Nome)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Email)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Email)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Idade)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Idade)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.DataInscricao)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.DataInscricao)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Sexo)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Sexo)
             </dd>
-    
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Foto)
+            </dt>
+
+            <dd>
+                @*@Html.DisplayFor(model => model.Foto)*@
+                <img src="@Url.Content(@Model.Foto)" alt="@Model.Texto" width="100" />
+            </dd>
+
+            <dd>
+                @Html.DisplayFor(model => model.Texto)
+            </dd>
+
         </dl>
     </div>
     <p>

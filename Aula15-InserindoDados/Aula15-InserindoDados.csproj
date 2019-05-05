@@ -88,6 +88,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Fotos\Avatar 2016.jpg" />
+    <Content Include="Fotos\freeza.jpg" />
+    <Content Include="Fotos\goku.jpg" />
+    <Content Include="Fotos\Heisen-ZillaSTEAM.jpg" />
+    <Content Include="Fotos\southparkPUC.png" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
