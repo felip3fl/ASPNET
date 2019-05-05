@@ -53,7 +53,7 @@ namespace Aula15_InserindoDados.Controllers
 
         [HttpPost]
         [ActionName("Edit")]
-        public ActionResult Edit_Post([Bind(Include = "Id, Email, Idade, DataInscricao, Sexo")]Aluno aluno)
+        public ActionResult Edit_Post([Bind(Exclude ="Nome")]Aluno aluno)
         {
             AlunoBLL alunobll = new AlunoBLL();
 
