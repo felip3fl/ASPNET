@@ -76,7 +76,13 @@ namespace Aula15_InserindoDados.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Details(int id)
+        {
+            AlunoBLL alunoBLL = new AlunoBLL();
+            Aluno aluno = alunoBLL.getAlunos().Single(x => x.Id == id);
 
+            return View(aluno);
+        }
 
     }
 }
