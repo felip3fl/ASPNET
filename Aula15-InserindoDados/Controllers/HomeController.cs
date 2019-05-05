@@ -53,16 +53,12 @@ namespace Aula15_InserindoDados.Controllers
 
         [HttpPost]
         [ActionName("Edit")]
-        public ActionResult Edit_Post(int id)
+        public ActionResult Edit_Post([Bind(Include = "Id, Email, Idade, DataInscricao, Sexo")]Aluno aluno)
         {
             AlunoBLL alunobll = new AlunoBLL();
-            Aluno aluno = alunobll.getAlunos().Single(x => x.Id == id);
 
-            //Metodo includeProperties
-            UpdateModel(aluno, includeProperties: new[] { "Id", "Email", "Idade", "DataInscricao", "Sexo" });
-
-            //Metodo excludeProperties
-            //UpdateModel(aluno, null, null, excludeProperties: new[] { "Nome" });
+            //bucando o nome, já que no Bind não retorna o NOME
+            aluno.Nome = alunobll.getAlunos().Single(x => x.Id == aluno.Id).Nome;
 
             if (ModelState.IsValid)
             {
