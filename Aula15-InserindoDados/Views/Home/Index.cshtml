@@ -15,6 +15,17 @@
     <p>
         @Html.ActionLink("Criar Novo Aluno", "Create")
     </p>
+
+    <p>
+        @using (@Html.BeginForm("Procurar", "Home", FormMethod.Get))
+        {
+            <b>Procurar Por:</b>
+            @Html.RadioButton("procurarPor", "Nome", true)<text>Nome</text>
+            @Html.RadioButton("procurarPor", "Email")<text>Email</text><br />
+            @Html.TextBox("criterio")<input type="submit" value="Procurar" />
+        }
+    </p>
+
     <table class="table" border="1">
         <tr>
             <th>

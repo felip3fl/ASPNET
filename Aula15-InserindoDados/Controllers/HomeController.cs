@@ -84,5 +84,26 @@ namespace Aula15_InserindoDados.Controllers
             return View(aluno);
         }
 
+        public ActionResult Procurar(string procurarPor, string criterio)
+        {
+            AlunoBLL alunoBLL = new AlunoBLL();
+
+            if(procurarPor == "Email")
+            {
+                Aluno aluno = alunoBLL.getAlunos().SingleOrDefault
+                    (x => x.Email == criterio || criterio == null);
+
+                return View(aluno);
+
+            }
+            else
+            {
+                Aluno aluno = alunoBLL.getAlunos().SingleOrDefault
+                    (x => x.Nome == criterio || criterio == null);
+
+                return View(aluno);
+            }
+        }
+
     }
 }
