@@ -22,6 +22,19 @@ namespace Aula15_InserindoDados.Controllers
             return View(alunos);
         }
 
+        // GET: Home
+        public ActionResult ListaAlunos()
+        {
+            //criei uma instância da classe AlunoBLL
+            AlunoBLL _aluno = new AlunoBLL();
+
+            //estou usando o método getAlunos e retornando uma lista de alunos
+            List<Aluno> alunos = _aluno.getAlunos().ToList();
+
+            //passando para view
+            return View(alunos);
+        }
+
         // GET
         [ActionName("Create")] //para qual Action o post da View vai procurar
         public ActionResult Create_Get()
