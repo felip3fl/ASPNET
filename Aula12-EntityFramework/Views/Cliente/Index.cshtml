@@ -11,19 +11,12 @@
     <meta name="viewport" content="width=device-width" />
     <title>Clientes</title>
 </head>
+<h2>Lista de Clientes</h2>
+<br />
 <body>
-    <div>
-        <table border="1">
-            @foreach (var cli in Model)
-            {
-                <tr>
-                    <td>@Html.DisplayFor(c => cli.ClienteId)</td>
-                    <td>@Html.DisplayFor(c => cli.Nome)</td>
-                    <td>@Html.DisplayFor(c => cli.Email)</td>
-                    <td>@Html.DisplayFor(c => cli.Telefone)</td>
-                </tr>
-            }
-        </table>
-    </div>
+    @foreach (var cli in Model)
+    {
+        <li>@Html.ActionLink(cli.Nome, "Detalhes", new { id = cli.ClienteId })</li>
+    }
 </body>
 </html>
