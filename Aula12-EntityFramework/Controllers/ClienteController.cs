@@ -10,11 +10,11 @@ namespace Aula12_EntityFramework.Controllers
     public class ClienteController : Controller
     {
         // GET: Cliente
-        public ActionResult Index()
+        public ActionResult Index(int TipoId)
         {
             using(ClienteContext clienteContext = new ClienteContext())
             {
-                List<Cliente> clientes = clienteContext.Clientes.ToList();
+                List<Cliente> clientes = clienteContext.Clientes.Where(cli => cli.TipoId == TipoId).ToList();
 
                 return View(clientes);
             }
