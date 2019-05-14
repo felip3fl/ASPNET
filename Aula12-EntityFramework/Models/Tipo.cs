@@ -6,13 +6,13 @@ using System.Web;
 
 namespace Aula12_EntityFramework.Models
 {
-    [Table("Clientes")]
-    public class Cliente
+    [Table("Tipos")]
+    public class Tipo
     {
-        public int ClienteId { get; set; }
-        public string Nome { get; set; }
-        public string Email { get; set; }
-        public string Telefone { get; set; }
         public int TipoId { get; set; }
+        public string Nome { get; set; }
+
+        //Essa propriedade é porque há uma chave estrangeira
+        public List<Cliente> Clientes { get; set; }
     }
 }

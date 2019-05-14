@@ -14,6 +14,7 @@ namespace Aula12_EntityFramework.Models
         }
 
         public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Tipo> Tipos { get; set; }
 
     }
 }
