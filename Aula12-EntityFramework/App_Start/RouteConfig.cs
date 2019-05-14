@@ -16,7 +16,7 @@ namespace Aula12_EntityFramework
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Cliente", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "TipoCliente", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
