@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Aula12_EntityFramework.Models.Tipo>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<h2>Lista de Tipos de Cliente</h2>
+<body>
+    <div>
+
+        @foreach (var tipo in Model)
+        {
+            <li>@Html.ActionLink(tipo.Nome, "Index", "Cliente", new { tipoId = tipo.TipoId}, null )</li>
+        }
+
+    </div>
+</body>
+</html>
