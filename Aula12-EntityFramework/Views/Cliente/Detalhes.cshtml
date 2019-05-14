@@ -17,8 +17,9 @@
         <p>Nome: @Html.TextBoxFor(c => c.Nome)</p>
         <p>Email: @Html.TextBoxFor(c => c.Email)</p>
         <p>Telefone: @Html.TextBoxFor(c => c.Telefone)</p>
+        <p>Tipo: @Html.TextBoxFor(c => c.TipoId)</p>
     </div>
     <hr />
-    @Html.ActionLink("Retornar para a lista", "Index")
+    @Html.ActionLink("Retornar para a lista", "Index", new { TipoId = @Model.TipoId})
 </body>
 </html>

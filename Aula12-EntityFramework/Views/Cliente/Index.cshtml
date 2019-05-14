@@ -18,5 +18,9 @@
     {
         <li>@Html.ActionLink(cli.Nome, "Detalhes", new { id = cli.ClienteId })</li>
     }
+    <p>
+        <hr />
+        @Html.ActionLink("Retorna para a lista de Tipos", "Index", "TipoCliente")
+    </p>
 </body>
 </html>
