@@ -13,10 +13,18 @@ namespace Aula25_Rotas
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //Criando uma nova rota
+            routes.MapRoute(
+                name:"Produtos",
+                url: "Produtos/",
+                defaults: new { controller = "Produto", action = "Index" }
+           );
+
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Produto", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
