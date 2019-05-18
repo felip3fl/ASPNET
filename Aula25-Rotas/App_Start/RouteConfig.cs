@@ -27,6 +27,14 @@ namespace Aula25_Rotas
               new { produtoid = @"\d+" } //Aqui restrige que só digito seja aceito
             );
 
+            //A posição aqui é importante, pq se estivese de baixo do Categorias,
+            //ele vai endenter como uma categoria
+            routes.MapRoute(
+              "Cadastro",
+              "Produtos/Cadastrar",
+              new { controller = "Produto", action = "Cadastrar" }
+            );
+
             routes.MapRoute(
               "Categorias",
               "Produtos/{categoria}",

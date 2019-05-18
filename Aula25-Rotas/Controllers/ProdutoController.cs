@@ -38,5 +38,11 @@ namespace Aula25_Rotas.Controllers
             return View(_categoria);
         }
 
+        public ActionResult Cadastrar()
+        {
+            return View();
+        }
+
+
     }
 }
