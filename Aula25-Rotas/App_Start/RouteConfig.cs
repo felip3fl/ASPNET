@@ -20,6 +20,12 @@ namespace Aula25_Rotas
                 defaults: new { controller = "Produto", action = "Index" }
            );
 
+            routes.MapRoute(
+              "Detalhes",
+              "Produtos/{produtoid}",
+              new { controller = "Produto", action = "Detalhes" },
+              new { produtoid = @"\d+" }
+            );
 
             routes.MapRoute(
                 name: "Default",
