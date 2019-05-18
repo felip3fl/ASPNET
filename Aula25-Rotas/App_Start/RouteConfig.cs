@@ -24,7 +24,13 @@ namespace Aula25_Rotas
               "Detalhes",
               "Produtos/{produtoid}",
               new { controller = "Produto", action = "Detalhes" },
-              new { produtoid = @"\d+" }
+              new { produtoid = @"\d+" } //Aqui restrige que só digito seja aceito
+            );
+
+            routes.MapRoute(
+              "Categorias",
+              "Produtos/{categoria}",
+              new { controller = "Produto", action = "Categorias" }
             );
 
             routes.MapRoute(
