@@ -23,5 +23,12 @@ namespace Aula25_Rotas.Controllers
             ViewBag.Produtos = "Todos os Produtos";
             return View(todosProdutos);
         }
+
+        // GET: Produto
+        public ActionResult Detalhes(int produtoId)
+        {
+            return View(todosProdutos.FirstOrDefault(x => x.ProdutoId == produtoId));
+        }
+
     }
 }
