@@ -30,5 +30,13 @@ namespace Aula25_Rotas.Controllers
             return View(todosProdutos.FirstOrDefault(x => x.ProdutoId == produtoId));
         }
 
+        // GET: Categorias
+        public ActionResult Categorias(string categoria)
+        {
+            var _categoria = todosProdutos.Where(x => x.Categoria == categoria).ToList();
+            ViewBag.Categoria = categoria;
+            return View(_categoria);
+        }
+
     }
 }
