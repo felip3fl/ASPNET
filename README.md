@@ -4,7 +4,7 @@
   MAC ASP.NET
 </h3>
 <p align="center">
-<img src="https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-1384c8">
+<img src="https://img.shields.io/badge/STATUS-ARQUIVADO-1384c8">
 <img src="https://img.shields.io/badge/PROJECT%20VERSION-1.0.0-1384c8">
 </p>
 
@@ -60,7 +60,7 @@ update-database -Verbose -Context MeuDBContext
 &nbsp;&nbsp;<img width="90"  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg">
 </p>
 
-- ``ASP.NET 2.x``
+- ``ASP.NET``
 - ``Paradigma de orientação a objetos``
 
 <BR>
