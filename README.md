@@ -1,4 +1,3 @@
-
 <h3 align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-plain-wordmark.svg" width="190" align="center" ><BR><BR>
   MAC ASP.NET
@@ -8,9 +7,9 @@
 <img src="https://img.shields.io/badge/PROJECT%20VERSION-1.0.0-1384c8">
 </p>
 
-<h4 align="center"> 
+<p align="center"> 
     :construction:  Projeto usado para estudo, forever em construção  :construction:
-</h4>
+</p>
 
 <BR>
 
